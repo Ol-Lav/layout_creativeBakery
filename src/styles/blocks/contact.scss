@@ -1,0 +1,36 @@
+.contact {
+  &__links {
+    display: flex;
+    justify-content: left;
+
+    @include onTablet {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  }
+  &__link {
+    margin: 40px 40px 40px 0;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:first-child {
+      margin-left: 16px;
+
+      @include onTablet {
+        margin-left: 44px;
+      }
+      @include onDesktop {
+        margin-left: 50px;
+      }
+    }
+  }
+}

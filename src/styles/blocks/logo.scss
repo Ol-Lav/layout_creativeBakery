@@ -1,0 +1,31 @@
+.logo {
+  width: 127px;
+  height: 24px;
+  padding: 10px 0;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  @include onDesktop {
+    margin: 20px 40px 135px;
+  }
+  &--footer {
+    margin: 50px 10px 40px 20px;
+
+    @include onTablet {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 80px 44px 40px;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 88px 50px 40px;
+    }
+  }
+}

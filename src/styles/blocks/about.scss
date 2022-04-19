@@ -1,0 +1,40 @@
+.about {
+  background-image: url("../images/Crumbs.svg");
+  background-repeat: no-repeat;
+  background-position-x: -10%;
+  background-position-y: 70%;
+
+  @include onTablet {
+    background-image: url("../images/Crumbs-3.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 40%;
+  }
+  @include onDesktop {
+    background-image: url("../images/Crumbs-2.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 10%;
+    margin-bottom: 340px;
+  }
+
+  &__info {
+    margin-bottom: 48px;
+    text-align: left;
+  }
+
+  &__number {
+    font-size: 96px;
+    line-height: 82px;
+    font-style: normal;
+    font-weight: 400;
+    color: $orange-primary-color;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    letter-spacing: -0.01em;
+  }
+}

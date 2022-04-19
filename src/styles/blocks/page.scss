@@ -1,0 +1,39 @@
+.page {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey-primary-color;
+  background-color: $pink-primary-color;
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s;
+    transform: translate(-100%);
+
+    &:target {
+      transform: translate(0);
+    }
+
+    @include onDesktop {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      height: 88px;
+      transform: translate(0);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.section {
+  margin: 0 16px;
+  @include onTablet {
+    margin: 0 44px;
+  }
+  @include onDesktop {
+    margin: 0 44px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $orange-primary-color;
+    font-size: 48px;
+    line-height: 41px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    @include onTablet {
+      font-size: 56px;
+      line-height: 48px;
+    }
+    @include onDesktop {
+      font-size: 72px;
+      line-height: 61px;
+    }
+  }
+  &__info {
+    letter-spacing: -0.01em;
+    margin-bottom: 60px;
+  }
+}

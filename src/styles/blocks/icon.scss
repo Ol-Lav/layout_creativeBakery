@@ -1,0 +1,34 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &--menu {
+    background-image: url("../images/lines.svg");
+    height: 8px;
+    margin: 14px 0;
+    padding: 14px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &--cross {
+    background-image: url("../images/cross.svg");
+    height: 12px;
+    margin: 14px 0;
+    padding: 10px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

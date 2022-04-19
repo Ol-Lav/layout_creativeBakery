@@ -1,0 +1,173 @@
+.footer {
+  width: 100%;
+  height: 915px;
+  color: $white-primary-color;
+  background-color: $grey-primary-color;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 150px;
+  }
+
+  @include onDesktop {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 150px;
+  }
+
+  &__menu {
+    margin-bottom: 60px;
+
+    @include onTablet {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-left: 44px;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-left: 50px;
+    }
+  }
+
+  &__title {
+    margin: 0 16px 16px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $grey-secondary-color;
+
+    @include onTablet {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--mail {
+      @include onTablet {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    @include onTablet {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    @include onDesktop {
+      grid-column: 4 / 6;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__item {
+    margin: 0 16px 16px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+
+    @include onTablet {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    &--mail {
+      @include onTablet {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: $white-primary-color;
+    text-decoration: none;
+    transition: transform 0.3s border 0.3s  color 0.3s font-weight 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      border: 2px solid transparent;
+      color: $white-primary-color;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    margin: 0 16px 40px;
+    font-size: 48px;
+    line-height: 41px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $white-primary-color;
+
+    @include onTablet {
+      font-size: 56px;
+      line-height: 48px;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      margin-top: 80px;
+    }
+    @include onDesktop {
+      grid-column: 4 / 8;
+      grid-row: 1 / 2;
+      margin-top: 88px;
+      font-size: 72px;
+      line-height: 61px;
+      letter-spacing: -0.05em;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 56px;
+    margin-left: 16px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: $grey-secondary-color;
+
+    @include onTablet {
+      margin: 40px;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+    }
+
+    @include onDesktop {
+      margin: 40px 0;
+      grid-column: 4 / 5;
+      grid-row: 3 / 4;
+    }
+  }
+
+  &__mail {
+
+    @include onTablet {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 5 / 6;
+      grid-row: 2 / 3;
+    }
+  }
+}

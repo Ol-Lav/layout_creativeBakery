@@ -1,0 +1,86 @@
+.menu {
+  background-color: $pink-primary-color;
+
+  &__content {
+    height: 100vh;
+    margin: 0 16px;
+    @include onDesktop {
+      height: 100%;
+    }
+  }
+
+  &__top {
+    margin-bottom: 130px;
+  }
+
+  &__list {
+    display: block;
+    position: relative;
+    list-style: none;
+    text-align: center;
+
+    @include onDesktop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  &__item {
+    margin-bottom: 24px;
+
+    &:nth-child(3n) {
+      margin-bottom: 32px;
+    }
+
+    @include onDesktop {
+      margin-right: 64px;
+      margin-top: 32px;
+
+      &:nth-child(3n) {
+        margin-right: 70px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $grey-primary-color;
+    text-decoration: none;
+    transition: transform 0.3s color 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $orange-primary-color;
+    }
+  }
+
+  &__contact {
+    position: relative;
+    color: $orange-primary-color;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: transform 0.3s font-weight 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      font-weight: 600;
+    }
+
+    &:before {
+      content: url("../images/phone.svg");
+      height: 18px;
+      position: absolute;
+      left: -22%;
+      top: 0;
+    }
+  }
+}
